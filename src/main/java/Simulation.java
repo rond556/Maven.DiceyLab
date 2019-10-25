@@ -17,6 +17,7 @@ public class Simulation {
                 roll2 = Dice.rollDice();
                 sumOfRolls = roll1 + roll2;
             bin.put(sumOfRolls, bin.get(sumOfRolls) + 1);
+
         }
         return bin;
     }
