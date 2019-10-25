@@ -5,20 +5,15 @@ public class Simulation {
 
 
     static Map diceRollSimulator(Integer numberOfDice, Integer numberOfRolls) {
-        int roll1;
-        int roll2;
-        //declare and instantiate the number of rolls
-        int sumOfRolls;
-        //count the number of rolls
-        int rollCounter = numberOfDice; //for later when we start going beyond two dice. For now, it equals 2
         TreeMap<Integer, Integer> bin = Bins.createBin(numberOfDice);
-            for (int i = 0; i <= numberOfRolls; i++) {
-                roll1 = Dice.rollDice();
-                roll2 = Dice.rollDice();
-                sumOfRolls = roll1 + roll2;
-            bin.put(sumOfRolls, bin.get(sumOfRolls) + 1);
-
+        for (int i = 1; i <= numberOfRolls; i++) {
+            int roll = 0;
+            for (int j = 1; j <= numberOfDice; j++) {
+                roll += Dice.rollDice();
+            }
+            bin.put(roll, bin.get(roll) + 1);
         }
         return bin;
     }
 }
+

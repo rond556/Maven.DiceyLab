@@ -10,18 +10,11 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many dice do you want to roll?\n");
         int numberOfDice = scanner.nextInt();
-        if(numberOfDice > 2) {
-            System.out.println("HAHA! Joke's on you! I haven't programmed in that option yet!\n" +
-                    "You're rolling 2!");
-        }
         System.out.println("How many times do you want to roll the dice.");
-        if(numberOfDice > 2) {
-            System.out.println("Don't worry. You do have options here!");
-        }
         int numberOfRolls = scanner.nextInt();
 
 
-        Map<Integer, Integer> resultMap = Simulation.diceRollSimulator(2,numberOfRolls);
+        Map<Integer, Integer> resultMap = Simulation.diceRollSimulator(numberOfDice,numberOfRolls);
 
         for(Integer unpack : resultMap.keySet()){
             double decimalResult = (double)resultMap.get(unpack)/numberOfRolls;
