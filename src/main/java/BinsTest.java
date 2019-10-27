@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import static org.junit.Assert.*;
 
 public class BinsTest {
-/*
+
     @Test
     public void createBin() {
         TreeMap<Integer, Integer> bin = new TreeMap<Integer, Integer>();
@@ -16,7 +16,6 @@ public class BinsTest {
         }
         Map expected = bin;
         Map actual = Bins.createBin(2);
-        assertSame(expected, actual);
+        assertEquals(expected, actual);
     }
- */
 }
