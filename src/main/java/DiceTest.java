@@ -9,7 +9,8 @@ public class DiceTest {
 
     @Test
     public void rollDiceTest() {
-        int expected = Dice.rollDice();
+        Dice dice = new Dice();
+        int expected = dice.rollDice();
         assert(expected >= 1 && expected <= 6);
     }
 
