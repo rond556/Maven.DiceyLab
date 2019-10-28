@@ -5,7 +5,8 @@ import java.util.Set;
 
 public class Main{
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
+        Simulation simulation = new Simulation();
         StringBuilder sb = new StringBuilder();
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many dice do you want to roll?");
@@ -18,7 +19,7 @@ public class Main{
         }
 
 
-        Map<Integer, Integer> resultMap = Simulation.diceRollSimulator(numberOfDice,numberOfRolls);
+        Map<Integer, Integer> resultMap = simulation.diceRollSimulator(numberOfDice,numberOfRolls);
 
         for(Integer rollResults : resultMap.keySet()){
             double decimalResult = (double)resultMap.get(rollResults)/numberOfRolls;
